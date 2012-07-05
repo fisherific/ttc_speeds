@@ -71,11 +71,11 @@ public void setup() {
    ***************************************/
 
   //Name of the csv data file you want to plot
-  //Has to follow the format xxx
+  //Has to follow the format found in the "sample.csv"
   //and be in the sketch "data" folder
-  data_name = "jan6_7_8.csv";  //jan6_6_12  jan6_7_8
+  data_name = "sample.csv";  //jan6_6_12  jan6_7_8
   
-  output_name = "jan6_7_8_120s_3.png";
+  output_name = "sample.png";
   movie_name = "jan6_7_8_120s_3.mov";
  
   //Lat/Lon map bounds.  Default is an area arount Toronto, On.
@@ -115,7 +115,8 @@ public void setup() {
   mapY1 = 30;
   mapY2 = height - mapY1;
   
-  vid_on = "y";
+  //y or n
+  vid_on = "n";
   
   if(vid_on == "y"){
     
@@ -135,7 +136,7 @@ public void setup() {
   //Time in seconds between each time interval (t).  delta_t = 200 means 200 seconds between checking car locations.
   //Higher numbers will cause the script to run faster, but have less detail
 
-  delta_t = 120;
+  delta_t = 20;
 
   //Don't need to touch this stuff (at the moment)
   frameRate(500);   
