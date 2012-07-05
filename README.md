@@ -1,16 +1,22 @@
 # Toronto Transit Speeds
 
-The processing sketch above takes a .csv file of nextbus location data, and translates that into a visual representation
-of the movement of all of the vehicles.
+The processing sketch above takes a .csv file of NextBus location data and translates that into a visual 
+representation of the vehicle movement.  The project is based around the Toronto Transit Commission, but 
+can be relatively easily modified to suit any city that uses the NextBus service.  You would have to edit 
+the lat/lng boundaries, as well as the map projection.  Currently based on the Great Lakes Albers (NAD83) projection. 
+
+## CSV file format
 
 The current csv format is as follows:
 
-SQL_ID, Unique Vehicle Number, Route Number, Route Detail, Lat, Lng, Seconds from Last Position, Valid?, Heading, Speed, Time, Unix Time
+RowID(unique), Unique Vehicle ID, Route Number, Route Detail, Lat, Lng, Seconds from Last Position Update, Predictable?, Heading, Speed, Time, Unix Time
 
-An example:
+Check out the data folder for a sample set.
 
-431631,8084,49,"49_1_49",43.638718,-79.549286,17,"true",252,"","2012-01-06 07:00:09",1325851574343
+## Get your own data set
 
-The data folder contains a sample set of data.  For your own projects, check out the nextbus api.
+I've also included a simple ruby script that pulls data from the Nextbus API and adds it to a new csv file.
 
-I'll add the script I used to scrape the data in the future.
+## Processing
+
+You will need a version of Processing for the desktop to run the .pde files.  Can be downloaded here: http://processing.org/download/
